@@ -6,9 +6,13 @@ function App() {
 
   const [songs, setSongs] = useState([]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="App">
-      <TrackForm />
+      <TrackForm handleFunc={handleSubmit} />
     </div>
   );
 }
